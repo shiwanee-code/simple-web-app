@@ -11,12 +11,7 @@ node {
         withSonarQubeEnv('sonarqube') { 
           sh "${mvnHome}/bin/mvn sonar:sonar"
         }
-    }
-  stage('Email Notification'){
-      mail bcc: '', body: '''Hi Welcome to jenkins email alerts
-      Thanks
-      shivani''', cc: '', from: '', replyTo: '', subject: 'Jenkins Job', to: 'shivaniraj.gupta29@gmail.com'
-   }
+        }
  }
   
   
